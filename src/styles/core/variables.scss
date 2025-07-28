@@ -1,0 +1,56 @@
+@use "helpers" as *;
+
+// ===================================
+// 🎨 Design Tokens System
+// ===================================
+
+:root {
+  // ===============================
+  // 🌈 COLOR PALETTE
+  // ===============================
+
+  --color-white: #ffffff;
+  --color-black: #0a0a0a;
+
+  --color-gray-100: #2b2b2b;
+  --color-gray-200: #161922;
+  --color-gray-300: #d1d1d14b;
+  --color-accent: #E2AB5B;
+
+  --color-neutral: rgba(255, 255, 255, 0.2);
+
+  // ===============================
+  // 🔤 TYPOGRAPHY SYSTEM
+  // ===============================
+
+  // Font families
+  --font-family-base: "Krub", sans-serif;
+  --font-family-accent: "Times New Roman", serif;
+
+  // ===============================
+  // 🎯 LAYOUT
+  // ===============================
+
+  --container-width: #{rem(1560)};
+  --container-padding-x: #{rem(20)};
+
+  // ===============================
+  // 🎭 BORDERS & RADIUS
+  // ===============================
+
+  --border-light: 1px solid var(--color-neutral);
+  --rounded: #{fluid(16, 24)};
+
+  // ===============================
+  // 🌟 SHADOWS
+  // ===============================
+  --shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+
+  // ===============================
+  // ⏳ TRANSITIONS
+  // ===============================
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.4s ease;
+  --transition-slow: 0.6s ease;
+}

@@ -1,0 +1,63 @@
+@use "../helpers" as *;
+
+.partners-section {
+  &__container {
+    position: relative;
+    padding-bottom: rem(120);
+
+    @include large {
+      padding-bottom: 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(20) rem(24);
+    align-items: center;
+    max-width: rem(760);
+
+    @include large {
+      max-width: 100%;
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    flex: 0 1 calc(100% / 3 - 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item-image {
+    max-width: 100%;
+    max-height: rem(130);
+    width: 100%;
+    object-fit: contain;
+
+    @include x-small {
+      max-height: rem(70);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-height: rem(915);
+    transform: translateX(50%);
+
+    @include large {
+      position: static;
+      max-height: none;
+      transform: none;
+      margin-top: rem(32);
+    }
+  }
+}

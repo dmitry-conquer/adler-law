@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+  </head>
+  <body data-smooth-scroll="true">
+    <div class="wrapper">
+      {{> header}}
+      <main>
+        <section class="base-hero base-hero--front">
+          <img src="/images/hero.webp" alt="" class="base-hero__background base-hero__background--desktop" />
+          <img src="/images/hero-mobile.jpg" alt="" class="base-hero__background base-hero__background--mobile" />
+          <div class="base-hero__container container-base">
+            <h1 class="base-hero__title">
+              Delivering Top-Flight Legal Solutions With Over 40 Years of Proven Experience and Results
+            </h1>
+            <a href="#" class="base-hero__button base-button">CONTACT US</a>
+          </div>
+        </section>
+
+        <section class="grid-section">
+          <div class="grid-section__container container-base">
+            <h2 class="grid-section__title">Practice Areas Overview:</h2>
+            <div class="grid-section__list">
+              <div class="grid-section__item shadow rounded">
+                <div class="grid-section__item-icon" id="lottie-icon-career"></div>
+                <div class="grid-section__item-content">
+                  <h3 class="grid-section__item-title">BUSINESS LAW</h3>
+                  <p class="grid-section__item-description">
+                    Business formation and dissolution, general business law and business management and governance,
+                    shareholder/partnership agreements, operating agreements, independent contractor agreements.
+                  </p>
+                </div>
+              </div>
+              <div class="grid-section__item shadow rounded">
+                <div class="grid-section__item-icon" id="lottie-icon-legal"></div>
+                <div class="grid-section__item-content">
+                  <h3 class="grid-section__item-title">CONTRACT LAW AND LITIGATION</h3>
+                  <p class="grid-section__item-description">
+                    Negotiate and prepare business agreements, analyze and interpret legal contracts, litigate
+                    enforcement and defense of legal contracts.
+                  </p>
+                </div>
+              </div>
+              <div class="grid-section__item shadow rounded">
+                <div class="grid-section__item-icon" id="lottie-icon-badge"></div>
+                <div class="grid-section__item-content">
+                  <h3 class="grid-section__item-title">CONTRACT LAW AND LITIGATION</h3>
+                  <p class="grid-section__item-description">
+                    Negotiate and prepare business agreements, analyze and interpret legal contracts, litigate
+                    enforcement and defense of legal contracts.
+                  </p>
+                </div>
+              </div>
+              <div class="grid-section__item shadow rounded">
+                <div class="grid-section__item-icon" id="lottie-icon-deal"></div>
+                <div class="grid-section__item-content">
+                  <h3 class="grid-section__item-title">CONTRACT LAW AND LITIGATION</h3>
+                  <p class="grid-section__item-description">
+                    Negotiate and prepare business agreements, analyze and interpret legal contracts, litigate
+                    enforcement and defense of legal contracts.
+                  </p>
+                </div>
+              </div>
+              <div class="grid-section__item shadow rounded">
+                <div class="grid-section__item-icon" id="lottie-icon-gavel"></div>
+                <div class="grid-section__item-content">
+                  <h3 class="grid-section__item-title">CONTRACT LAW AND LITIGATION</h3>
+                  <p class="grid-section__item-description">
+                    Negotiate and prepare business agreements, analyze and interpret legal contracts, litigate
+                    enforcement and defense of legal contracts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="partners-section">
+          <div class="partners-section__container container-base">
+            <h2 class="partners-section__title">Our Partners</h2>
+            <div class="partners-section__list">
+              <div class="partners-section__item">
+                <img src="/images/partner1.webp" alt="" class="partners-section__item-image" />
+              </div>
+              <div class="partners-section__item">
+                <img src="/images/partner2.webp" alt="" class="partners-section__item-image" />
+              </div>
+              <div class="partners-section__item">
+                <img src="/images/partner3.webp" alt="" class="partners-section__item-image" />
+              </div>
+            </div>
+            <img src="/images/j.webp" alt="" class="partners-section__image" />
+          </div>
+        </section>
+      </main>
+      {{> footer}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"></script>
+    <script>
+      const iconsName = [
+        "badge",
+        "career",
+        "deal",
+        "family-2",
+        "family",
+        "gavel",
+        "job-promotion",
+        "laws",
+        "lawyer-day",
+        "learning",
+        "legal",
+      ];
+      iconsName.forEach(iconName => {
+        const container = document.getElementById(`lottie-icon-${iconName}`);
+        if (!container) return;
+        lottie.loadAnimation({
+          container: container,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path: `/icons/${iconName}.json`,
+        });
+      });
+    </script>
+    <script type="module" src="/src/scripts/main.ts" defer></script>
+  </body>
+</html>

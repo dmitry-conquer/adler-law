@@ -1,0 +1,54 @@
+@use "../helpers" as *;
+.grid-section {
+  padding-top: fluid(60, 150);
+  padding-bottom: fluid(100, 150);
+  position: relative;
+  z-index: 2;
+
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: fluid(16, 32);
+
+    @include large {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    background-color: var(--color-white);
+    padding: fluid(24, 32);
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(24, 60);
+    transition: background-color var(--transition-base);
+
+    @include hover {
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__item-icon {
+    width: fluid(40, 60);
+    height: fluid(40, 60);
+  }
+
+  &__item-content {
+  }
+
+  &__item-title {
+  }
+
+  &__item-description {
+  }
+}
