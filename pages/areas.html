@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Areas</title>
+  </head>
+  <body data-smooth-scroll="true">
+    <div class="wrapper">
+      {{> header}}
+      <main>
+        <section class="base-hero">
+          <img src="/images/areas-hero.webp" alt="" class="base-hero__background base-hero__background--desktop" />
+          <img src="/images/areas-hero.webp" alt="" class="base-hero__background base-hero__background--mobile" />
+          <div class="base-hero__container container-base">
+            <h1 class="base-hero__title">Practice Areas</h1>
+            <a href="#" class="base-hero__button base-button">CONTACT US</a>
+          </div>
+        </section>
+
+        <section class="practice-areas">
+          <div class="practice-areas__container container-base">
+            <div class="practice-areas__grid">
+              <div class="practice-areas__item item-areas shadow rounded">
+                <div class="item-areas__image">
+                  <img src="/images/area1.webp" alt="" />
+                </div>
+                <div class="item-areas__content">
+                  <h2 class="item-areas__title">Business Law</h2>
+                  <p class="item-areas__text">
+                    Mitchell D. Adler, P.A., understands the time, energy, and strategic planning it takes to build and
+                    operate a successful business. Our firm is committed to protecting your interests and leveraging
+                    every legal advantage to help your company grow and thrive. Whether you're launching a new venture
+                    or managing a mature enterprise, we provide comprehensive legal support tailored to your business
+                    goals.
+                  </p>
+                  <a href="#" class="item-areas__link inline-icon inline-icon--arrow">Learn more</a>
+                </div>
+              </div>
+              <div class="practice-areas__item item-areas shadow rounded">
+                <div class="item-areas__image">
+                  <img src="/images/area2.webp" alt="" />
+                </div>
+                <div class="item-areas__content">
+                  <h2 class="item-areas__title">Business Law</h2>
+                  <p class="item-areas__text">
+                    Mitchell D. Adler, P.A., understands the time, energy, and strategic planning it takes to build and
+                    operate a successful business. Our firm is committed to protecting your interests and leveraging
+                    every legal advantage to help your company grow and thrive. Whether you're launching a new venture
+                    or managing a mature enterprise, we provide comprehensive legal support tailored to your business
+                    goals.
+                  </p>
+                  <a href="#" class="item-areas__link inline-icon inline-icon--arrow">Learn more</a>
+                </div>
+              </div>
+              <div class="practice-areas__item item-areas shadow rounded">
+                <div class="item-areas__image">
+                  <img src="/images/area1.webp" alt="" />
+                </div>
+                <div class="item-areas__content">
+                  <h2 class="item-areas__title">Business Law</h2>
+                  <p class="item-areas__text">
+                    Mitchell D. Adler, P.A., understands the time, energy, and strategic planning it takes to build and
+                    operate a successful business. Our firm is committed to protecting your interests and leveraging
+                    every legal advantage to help your company grow and thrive. Whether you're launching a new venture
+                    or managing a mature enterprise, we provide comprehensive legal support tailored to your business
+                    goals.
+                  </p>
+                  <a href="#" class="item-areas__link inline-icon inline-icon--arrow">Learn more</a>
+                </div>
+              </div>
+              <div class="practice-areas__item item-areas shadow rounded">
+                <div class="item-areas__image">
+                  <img src="/images/area2.webp" alt="" />
+                </div>
+                <div class="item-areas__content">
+                  <h2 class="item-areas__title">Business Law</h2>
+                  <p class="item-areas__text">
+                    Mitchell D. Adler, P.A., understands the time, energy, and strategic planning it takes to build and
+                    operate a successful business. Our firm is committed to protecting your interests and leveraging
+                    every legal advantage to help your company grow and thrive. Whether you're launching a new venture
+                    or managing a mature enterprise, we provide comprehensive legal support tailored to your business
+                    goals.
+                  </p>
+                  <a href="#" class="item-areas__link inline-icon inline-icon--arrow">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> footer}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"></script>
+    <script>
+      const iconsName = [
+        "badge",
+        "career",
+        "deal",
+        "family-2",
+        "family",
+        "gavel",
+        "job-promotion",
+        "laws",
+        "lawyer-day",
+        "learning",
+        "legal",
+      ];
+      iconsName.forEach(iconName => {
+        const container = document.getElementById(`lottie-icon-${iconName}`);
+        if (!container) return;
+        lottie.loadAnimation({
+          container: container,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path: `/icons/${iconName}.json`,
+        });
+      });
+    </script>
+    <script type="module" src="/src/scripts/main.ts" defer></script>
+  </body>
+</html>
