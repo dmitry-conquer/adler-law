@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Areas</title>
+  </head>
+  <body data-smooth-scroll="true">
+    <div class="wrapper">
+      {{> header}}
+      <main>
+        <section class="single-area">
+          <div class="single-area__container">
+            <div class="single-area__image">
+              <img src="/images/area1-full.webp" alt="" />
+            </div>
+            <div class="single-area__content base-text">
+              <h1>Business Law</h1>
+              <div class="single-area__content-description">
+                <p>
+                  Mitchell D. Adler, P.A., understands the time, energy, and strategic planning it takes to build and
+                  operate a successful business. Our firm is committed to protecting your interests and leveraging every
+                  legal advantage to help your company grow and thrive. Whether you're launching a new venture or
+                  managing a mature enterprise, we provide comprehensive legal support tailored to your business goals.
+                </p>
+                <p>
+                  Mitchell D. Adler, P.A., understands the time, energy, and strategic planning it takes to build and
+                  operate a successful business. Our firm is committed to protecting your interests and leveraging every
+                  legal advantage to help your company grow and thrive. Whether you're launching a new venture or
+                  managing a mature enterprise, we provide comprehensive legal support tailored to your business goals.
+                </p>
+              </div>
+              <p class="single-area__content-list-title"><strong>Our business law services include:</strong></p>
+              <ul>
+                <li>
+                  Strategic legal counsel for companies, corporations, and individuals navigating critical business
+                  decisions
+                </li>
+                <li>
+                  Entity formation, including drafting and filing articles of incorporation, partnership agreements, and
+                  LLC operating documents
+                </li>
+                <li>Consultations and strategic planning  to provide real-time legal guidance and risk assessment</li>
+                <li>Evaluation of new business ventures, investment opportunities, and partnership arrangements</li>
+                <li>
+                  Resolution of shareholder, member, and partnership disputes through negotiation, mediation, or
+                  litigation
+                </li>
+                <li>Drafting and negotiating shareholder agreements, operating agreements, and buy-sell provisions</li>
+                <li>
+                  Contract creation, review, and negotiation to ensure favorable terms and enforceable protections
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> footer}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"></script>
+    <script>
+      const iconsName = [
+        "badge",
+        "career",
+        "deal",
+        "family-2",
+        "family",
+        "gavel",
+        "job-promotion",
+        "laws",
+        "lawyer-day",
+        "learning",
+        "legal",
+      ];
+      iconsName.forEach(iconName => {
+        const container = document.getElementById(`lottie-icon-${iconName}`);
+        if (!container) return;
+        lottie.loadAnimation({
+          container: container,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path: `/icons/${iconName}.json`,
+        });
+      });
+    </script>
+    <script type="module" src="/src/scripts/main.ts" defer></script>
+  </body>
+</html>
