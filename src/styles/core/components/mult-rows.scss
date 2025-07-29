@@ -2,6 +2,11 @@
 
 .mult-rows {
   padding-top: fluid(60, 124);
+
+  &--increase-pt {
+    padding-top: fluid(60, 180);
+  }
+
   &__container {
   }
 
@@ -13,13 +18,16 @@
   }
 
   &__base {
+    &:not(:last-child) {
+      margin-bottom: fluid(32, 120);
+    }
   }
 }
 
 .mult-rows-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: rem(24) fluid(0, 185);
+  gap: rem(40) fluid(0, 185);
   margin-bottom: fluid(32, 120);
 
   @include medium {
@@ -79,22 +87,38 @@
     grid-template-columns: 1fr;
   }
 
-  &:not(:last-child) {
-    margin-bottom: fluid(32, 120);
-  }
-
   &:nth-child(even) {
     .mult-rows-base__content {
       order: 2;
     }
   }
-
-  &__content {
-  }
-
   &__image {
     img {
       border-radius: var(--rounded);
     }
+  }
+}
+
+.mult-rows-list {
+  &__item {
+    display: flex;
+    gap: rem(24);
+
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+
+    @include x-small {
+      flex-direction: column;
+    }
+  }
+
+  &__item-icon {
+    flex-shrink: 0;
+    width: fluid(40, 60);
+    height: fluid(40, 60);
+  }
+
+  &__item-content {
   }
 }

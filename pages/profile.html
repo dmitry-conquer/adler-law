@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+  </head>
+  <body data-smooth-scroll="true">
+    <div class="wrapper">
+      {{> header}}
+      <main>
+        <section class="base-hero">
+          <img src="/images/pfofile-hero.webp" alt="" class="base-hero__background base-hero__background--desktop" />
+          <img src="/images/pfofile-hero.webp" alt="" class="base-hero__background base-hero__background--mobile" />
+          <div class="base-hero__container container-base">
+            <h1 class="base-hero__title">Attorney Profile</h1>
+            <a href="#" class="base-hero__button base-button">CONTACT US</a>
+          </div>
+        </section>
+
+        <section class="mult-rows mult-rows--increase-pt">
+          <div class="mult-rows__container container-base">
+            <div class="mult-rows__hero mult-rows-hero">
+              <div class="mult-rows-hero__image">
+                <img src="/images/adler2.webp" alt="" />
+              </div>
+              <div class="mult-rows-hero__content mult-rows-list">
+                <div class="mult-rows-list__item">
+                  <div class="mult-rows-list__item-icon" id="lottie-icon-career"></div>
+                  <div class="mult-rows-list__item-content">
+                    <h3>Education:</h3>
+                    <div class="base-text">
+                      <ul>
+                        <li>Juris Doctor, cum laude, from New York Law School, 1984.</li>
+                        <li>Bachelor of Arts from the State University of New York at Albany, 1977.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="mult-rows-list__item">
+                  <div class="mult-rows-list__item-icon" id="lottie-icon-family"></div>
+                  <div class="mult-rows-list__item-content">
+                    <h3>Education:</h3>
+                    <div class="base-text">
+                      <ul>
+                        <li>Juris Doctor, cum laude, from New York Law School, 1984.</li>
+                        <li>Bachelor of Arts from the State University of New York at Albany, 1977.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="mult-rows-list__item">
+                  <div class="mult-rows-list__item-icon" id="lottie-icon-laws"></div>
+                  <div class="mult-rows-list__item-content">
+                    <h3>Education:</h3>
+                    <div class="base-text">
+                      <ul>
+                        <li>Juris Doctor, cum laude, from New York Law School, 1984.</li>
+                        <li>Bachelor of Arts from the State University of New York at Albany, 1977.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> footer}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"></script>
+    <script>
+      const iconsName = [
+        "badge",
+        "career",
+        "deal",
+        "family-2",
+        "family",
+        "gavel",
+        "job-promotion",
+        "laws",
+        "lawyer-day",
+        "learning",
+        "legal",
+      ];
+      iconsName.forEach(iconName => {
+        const container = document.getElementById(`lottie-icon-${iconName}`);
+        if (!container) return;
+        lottie.loadAnimation({
+          container: container,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path: `/icons/${iconName}.json`,
+        });
+      });
+    </script>
+    <script type="module" src="/src/scripts/main.ts" defer></script>
+  </body>
+</html>
