@@ -42,8 +42,9 @@
       color: var(--color-gray-200);
       font-family: var(--font-family-accent);
       font-size: fluid(32, 60);
-      line-height: 1.2;
+      line-height: 1;
       text-align: left;
+      letter-spacing: 1px;
     }
 
     ul {

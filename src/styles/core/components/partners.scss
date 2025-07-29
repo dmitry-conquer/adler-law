@@ -13,6 +13,7 @@
   }
 
   &__title {
+    margin-bottom: fluid(24, 75);
   }
 
   &__list {
@@ -51,7 +52,7 @@
     right: 0;
     bottom: 0;
     max-height: rem(915);
-    transform: translateX(50%);
+    transform: translateX(40%);
 
     @include large {
       position: static;

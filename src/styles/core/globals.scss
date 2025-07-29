@@ -114,11 +114,4 @@ p:not([class]):not(:last-of-type) {
     line-height: 1.62;
     letter-spacing: 1px;
   }
-  li {
-    list-style-position: inside;
-
-    &::marker {
-      content: "- ";
-    }
-  }
 }

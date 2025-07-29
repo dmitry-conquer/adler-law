@@ -1,7 +1,7 @@
 @use "../helpers" as *;
 
 .htop-bar {
-  background-color: var(--color-gray-100);
+  background-color: var(--color-black);
 
   &__container {
     font-style: normal;
@@ -47,7 +47,7 @@
   &__item {
     color: var(--color-white);
     font-size: fluid(10, 14);
-    letter-spacing: 1px;
+    letter-spacing: 1.4px;
     display: flex;
     column-gap: rem(8);
   }
