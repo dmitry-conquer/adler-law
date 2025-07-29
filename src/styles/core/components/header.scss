@@ -1,2 +1,67 @@
 @use "../helpers" as *;
 
+.htop-bar {
+  background-color: var(--color-gray-100);
+
+  &__container {
+    font-style: normal;
+    padding: fluid(10, 25) rem(20) fluid(8, 12) rem(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(5) rem(24);
+    flex-wrap: wrap;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 400%;
+      height: rem(1);
+      background-color: var(--color-neutral);
+      bottom: 0;
+      left: 0;
+      transform: translateX(50%);
+    }
+
+    @include medium {
+      flex-direction: column;
+      align-items: center;
+      justify-content: stretch;
+    }
+  }
+
+  &__row {
+    display: flex;
+    column-gap: rem(27);
+    &--left {
+      .htop-bar__item {
+        @include x-small {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__item {
+    color: var(--color-white);
+    font-size: fluid(10, 14);
+    letter-spacing: 1px;
+    display: flex;
+    column-gap: rem(8);
+  }
+
+  &__item-term {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__item-description {
+    transition: color var(--transition-base);
+    text-align: center;
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+}
