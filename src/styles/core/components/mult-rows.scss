@@ -1,0 +1,100 @@
+@use "../helpers" as *;
+
+.mult-rows {
+  padding-top: fluid(60, 124);
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: fluid(24, 150);
+  }
+
+  &__hero {
+  }
+
+  &__base {
+  }
+}
+
+.mult-rows-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(24) fluid(0, 185);
+  margin-bottom: fluid(32, 120);
+
+  @include medium {
+    grid-template-columns: 1fr;
+  }
+  &__image {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    @include medium {
+      justify-content: center;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 400%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: var(--color-black);
+      border-radius: var(--rounded);
+      pointer-events: none;
+      z-index: -1;
+      transform: translateY(rem(-58));
+
+      @include medium {
+        display: none;
+      }
+    }
+
+    img {
+      width: rem(445);
+      height: rem(445);
+      border-radius: var(--rounded);
+      transform: translateX(fluid(20, 92));
+      object-fit: cover;
+
+      @include medium {
+        transform: none;
+        height: auto;
+      }
+    }
+  }
+
+  &__content {
+  }
+}
+
+.mult-rows-base {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(24) fluid(0, 185);
+
+  @include medium {
+    grid-template-columns: 1fr;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: fluid(32, 120);
+  }
+
+  &:nth-child(even) {
+    .mult-rows-base__content {
+      order: 2;
+    }
+  }
+
+  &__content {
+  }
+
+  &__image {
+    img {
+      border-radius: var(--rounded);
+    }
+  }
+}

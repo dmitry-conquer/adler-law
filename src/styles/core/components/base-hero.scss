@@ -4,13 +4,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
   position: relative;
-  @include large {
-    min-height: auto;
-    padding-top: rem(60);
-    padding-bottom: rem(315);
-  }
+  padding-block: fluid(90, 275);
 
   &::before {
     content: "";
@@ -26,6 +21,12 @@
 
   &--front {
     padding-block: fluid(60, 160);
+    min-height: 100vh;
+    @include large {
+      min-height: auto;
+      padding-top: rem(60);
+      padding-bottom: rem(315);
+    }
   }
 
   &__background {

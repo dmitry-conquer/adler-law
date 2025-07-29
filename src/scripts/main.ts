@@ -1,9 +1,6 @@
 import "../styles/main.scss";
-
-const initUIComponents = (): void => {
- 
-};
+import AdaptiveDOM from "./utils/AdaptiveDOM";
 
 document.addEventListener("DOMContentLoaded", (): void => {
-  initUIComponents();
+  new AdaptiveDOM();
 });

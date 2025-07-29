@@ -1,0 +1,124 @@
+@use "../helpers" as *;
+
+.new-footer {
+  padding: fluid(40, 68) 0 fluid(40, 50) 0;
+  background-color: var(--color-black);
+
+  &__container {
+  }
+
+  &__text {
+    color: #ededed;
+    font-size: rem(15);
+    line-height: 2;
+    letter-spacing: 1px;
+    padding-bottom: fluid(24, 32);
+    border-bottom: var(--border-light);
+  }
+
+  &__body {
+    padding-top: fluid(27, 50);
+  }
+
+  &__body-top {
+    display: flex;
+    gap: rem(27);
+    justify-content: space-between;
+    margin-bottom: rem(48);
+
+    @include large {
+      flex-direction: column;
+    }
+
+    @include x-small {
+      margin-bottom: rem(24);
+      padding-bottom: rem(24);
+      border-bottom: var(--border-light);
+    }
+  }
+
+  &__logo-wrapper {
+  }
+
+  &__logo-image {
+    max-width: rem(364);
+    width: 100%;
+    height: auto;
+  }
+
+  &__menu {
+    @include x-small {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      column-gap: rem(27);
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    gap: rem(24);
+
+    @include x-small {
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+  }
+
+  &__menu-item {
+  }
+
+  &__menu-link {
+    color: var(--color-white);
+    font-size: rem(14);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1px;
+    transition: color var(--transition-base);
+
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__body-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include medium {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: rem(24);
+    }
+  }
+
+  &__copyright {
+    color: #ededed;
+    font-size: rem(15);
+    line-height: 2;
+    letter-spacing: 1px;
+
+    a {
+      transition: color var(--transition-base);
+
+      @include hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  &__google-link {
+    transition: opacity var(--transition-base);
+
+    @include hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__google-image {
+    width: rem(254);
+    height: rem(74);
+    object-fit: contain;
+  }
+}

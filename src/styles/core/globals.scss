@@ -47,8 +47,10 @@ h1,
   text-align: center;
   font-size: fluid(36, 100);
   line-height: 1;
+  letter-spacing: -3px;
 
   @include small {
+    letter-spacing: 0;
     line-height: 1.25;
   }
 }
@@ -100,4 +102,20 @@ p:not([class]):not(:last-of-type) {
 
 .transition {
   transition: all var(--transition-base);
+}
+
+.base-text {
+  p,
+  li {
+    font-size: 1rem;
+    line-height: 1.62;
+    letter-spacing: 1px;
+  }
+  li {
+    list-style-position: inside;
+
+    &::marker {
+      content: "- ";
+    }
+  }
 }

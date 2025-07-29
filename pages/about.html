@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+  </head>
+  <body data-smooth-scroll="true">
+    <div class="wrapper">
+      {{> header}}
+      <main>
+        <section class="base-hero">
+          <img src="/images/about-hero.webp" alt="" class="base-hero__background base-hero__background--desktop" />
+          <img src="/images/about-hero.webp" alt="" class="base-hero__background base-hero__background--mobile" />
+          <div class="base-hero__container container-base">
+            <h1 class="base-hero__title">About Adler Law</h1>
+            <a href="#" class="base-hero__button base-button">CONTACT US</a>
+          </div>
+        </section>
+
+        <section class="mult-rows">
+          <div class="mult-rows__container container-base">
+            <h2 class="mult-rows__title text-center">Mitchell D. Adler, P.A.</h2>
+            <div class="mult-rows__hero mult-rows-hero">
+              <div class="mult-rows-hero__image">
+                <img src="/images/adler.webp" alt="" />
+              </div>
+              <div class="mult-rows-hero__content base-text">
+                <p>
+                  Mitchell D. Adler has consistently distinguished himself as a skillful, diligent, and client-focused
+                  attorney—both in and out of the courtroom. Known for his professionalism, integrity, and compassionate
+                  approach, Mitch is dedicated to delivering tailored legal solutions focusing on common-sense
+                  approaches that serve each client’s unique needs and objectives.
+                </p>
+                <p>
+                  Recognized for excellence in the legal community, Mitch is among the top 10% of attorneys to receive
+                  the highest AV® Preeminent™ rating from Martindale-Hubbell, reflecting exceptional peer-reviewed
+                  standards of legal ability and ethical conduct. His practice focuses on business law, commercial
+                  litigation, real estate, trust and probate litigation.
+                </p>
+                <p>
+                  Mitch earned his Juris Doctor, cum laude, from New York Law School in 1984 and was admitted to the
+                  Florida Bar that same year. He holds a Bachelor of Arts from the State University of New York at
+                  Albany, awarded in 1977.
+                </p>
+              </div>
+            </div>
+            <div class="mult-rows__base mult-rows-base">
+              <div class="mult-rows-base__content base-text">
+                <p>
+                  In addition to his legal practice, Mitch has contributed to the legal community through teaching and
+                  service. He served as an Adjunct Faculty Member in the Paralegal Studies Program at Broward College
+                  (2009–2014), acted as a Certified Arbitrator for the 17th Judicial Circuit Court of Broward County,
+                  and was a member—and later Chair—of the Florida Bar Grievance Committee for the 17th Judicial Circuit
+                  (Committee “E,” 2001–2003).
+                </p>
+                <p>
+                  Mitch was honored as a Top Lawyer by the South Florida Legal Guide for 14 consecutive years
+                  (2003–2016) and holds a “Superb” rating from AVVO, a respected national attorney directory and ratings
+                  service.
+                </p>
+                <p>
+                  To learn more about Mitchell D. Adler, P.A., or to schedule a consultation, please visit our Contact
+                  section. We look forward to helping you or your client navigate your legal challenges with confidence.
+                </p>
+              </div>
+              <div class="mult-rows-base__image">
+                <img src="/images/flag.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid-section">
+          <div class="grid-section__container container-base">
+            <h2 class="grid-section__title text-center">Attorney Profile</h2>
+            <div class="grid-section__list">
+              <div class="grid-section__item shadow rounded">
+                <div class="grid-section__item-icon" id="lottie-icon-career"></div>
+                <div class="grid-section__item-content">
+                  <h3 class="grid-section__item-title">BUSINESS LAW</h3>
+                  <div class="grid-section__item-description base-text">
+                    <ul>
+                      <li>Juris Doctor, cum laude, from New York Law School, 1984.</li>
+                      <li>Bachelor of Arts from the State University of New York at Albany, 1977.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-section__item shadow rounded">
+                <div class="grid-section__item-icon" id="lottie-icon-career"></div>
+                <div class="grid-section__item-content">
+                  <h3 class="grid-section__item-title">BUSINESS LAW</h3>
+                  <div class="grid-section__item-description base-text">
+                    <ul>
+                      <li>Juris Doctor, cum laude, from New York Law School, 1984.</li>
+                      <li>Bachelor of Arts from the State University of New York at Albany, 1977.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-section__item shadow rounded">
+                <div class="grid-section__item-icon" id="lottie-icon-career"></div>
+                <div class="grid-section__item-content">
+                  <h3 class="grid-section__item-title">BUSINESS LAW</h3>
+                  <div class="grid-section__item-description base-text">
+                    <ul>
+                      <li>Juris Doctor, cum laude, from New York Law School, 1984.</li>
+                      <li>Bachelor of Arts from the State University of New York at Albany, 1977.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> footer}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"></script>
+    <script>
+      const iconsName = [
+        "badge",
+        "career",
+        "deal",
+        "family-2",
+        "family",
+        "gavel",
+        "job-promotion",
+        "laws",
+        "lawyer-day",
+        "learning",
+        "legal",
+      ];
+      iconsName.forEach(iconName => {
+        const container = document.getElementById(`lottie-icon-${iconName}`);
+        if (!container) return;
+        lottie.loadAnimation({
+          container: container,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path: `/icons/${iconName}.json`,
+        });
+      });
+    </script>
+    <script type="module" src="/src/scripts/main.ts" defer></script>
+  </body>
+</html>
