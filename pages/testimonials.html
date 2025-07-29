@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+  </head>
+  <body data-smooth-scroll="true">
+    <div class="wrapper">
+      {{> header}}
+      <main>
+        <section class="base-hero">
+          <img
+            src="/images/testimonials-hero.webp"
+            alt=""
+            class="base-hero__background base-hero__background--desktop"
+          />
+          <img
+            src="/images/testimonials-hero.webp"
+            alt=""
+            class="base-hero__background base-hero__background--mobile"
+          />
+          <div class="base-hero__container container-base">
+            <h1 class="base-hero__title">Testimonials</h1>
+            <a href="#" class="base-hero__button base-button">CONTACT US</a>
+          </div>
+        </section>
+
+        <section class="testimonials-list">
+          <div class="testimonials-list__container container-base">
+            <div class="testimonials-list__column">
+              <blockquote class="testimonials-list__item item-testimonials rounded shadow base-text">
+                <p class="item-testimonials__text">
+                  Boca Raton Criminal Defense Lawyer Dominique Burkhardt I worked with Mr. Adler on a complex case, and
+                  in addition to his years of legal experience, he is a dedicated and tenacious attorney who is
+                  detail-oriented and cares a great deal about his clients. I would highly recommend Mr. Adler for your
+                  legal matter. “A True Advocate”
+                </p>
+                <cite class="item-testimonials__author">Posted by Louise</cite>
+              </blockquote>
+              <blockquote class="testimonials-list__item item-testimonials rounded shadow base-text">
+                <p class="item-testimonials__text">
+                  Boca Raton Criminal Defense Lawyer Dominique Burkhardt I worked with Mr. Adler on a complex case, and
+                  in addition to his years of legal experience, he is a dedicated and tenacious attorney who is
+                  detail-oriented and cares a great deal about his clients. I would highly recommend Mr. Adler for your
+                  legal matter. “A True Advocate”
+                </p>
+                <cite class="item-testimonials__author">Posted by Louise</cite>
+              </blockquote>
+            </div>
+            <div class="testimonials-list__column">
+              <blockquote class="testimonials-list__item item-testimonials rounded shadow base-text">
+                <p class="item-testimonials__text">Best lawyer. Knowledgeable and specific. Highly recommend!</p>
+                <cite class="item-testimonials__author">Posted by Louise</cite>
+              </blockquote>
+              <blockquote class="testimonials-list__item item-testimonials rounded shadow base-text">
+                <p class="item-testimonials__text">
+                  I contacted Mr. Adler for a small business partner issue [that was] … emotional and heated for me
+                  [and] had gone on for years. Upon meeting Mr. Adler … was very upfront and compassionate. He did not
+                  pressure me during my initial consultation, which gave me time to contemplate all that would be
+                  involved…. I considered my issue a very small fish in a big pond [but] … I felt like Mr. Adler treated
+                  me and my case like I was one of his 'big' clients. He was extremely prompt in starting the case and
+                  following up with any issues that arose. He always kept an open line of communication with me. As the
+                  case progressed, he [gladly modified his approach] … for a positive outcome on my part. His advice and
+                  guidance were spot on. He always had my best interest in mind and is an outstanding advocate. I am
+                  truly grateful for all his help …. Mr. Adler is an extremely knowledgeable, professional,
+                  compassionate and fair attorney. I highly recommend him!!!! <br />
+                  <strong>“An attorney who knows the law and cares”</strong>
+                </p>
+                <cite class="item-testimonials__author">Posted by Louise</cite>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> footer}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"></script>
+    <script>
+      const iconsName = [
+        "badge",
+        "career",
+        "deal",
+        "family-2",
+        "family",
+        "gavel",
+        "job-promotion",
+        "laws",
+        "lawyer-day",
+        "learning",
+        "legal",
+      ];
+      iconsName.forEach(iconName => {
+        const container = document.getElementById(`lottie-icon-${iconName}`);
+        if (!container) return;
+        lottie.loadAnimation({
+          container: container,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path: `/icons/${iconName}.json`,
+        });
+      });
+    </script>
+    <script type="module" src="/src/scripts/main.ts" defer></script>
+  </body>
+</html>
