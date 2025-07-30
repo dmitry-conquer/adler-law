@@ -50,18 +50,24 @@
     letter-spacing: 1.4px;
     display: flex;
     column-gap: rem(8);
+
+     & a.htop-bar__item-description {
+      @include hover {
+        color: var(--color-accent) !important;
+      }
+    }
   }
 
   &__item-term {
     font-weight: 700;
     text-transform: uppercase;
+   
   }
 
   &__item-description {
     transition: color var(--transition-base);
     text-align: center;
-    @include hover {
-      color: var(--color-accent);
-    }
+    color: #fff !important;
+    text-decoration: none !important;
   }
 }

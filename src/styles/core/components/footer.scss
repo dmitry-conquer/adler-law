@@ -63,21 +63,22 @@
       flex-direction: column;
       flex-shrink: 0;
     }
-  }
 
-  &__menu-item {
-  }
+    li {
+      a {
+        color: var(--color-white);
+        font-size: rem(14);
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 1px;
+        transition: color var(--transition-base);
+        text-transform: uppercase;
 
-  &__menu-link {
-    color: var(--color-white);
-    font-size: rem(14);
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 1px;
-    transition: color var(--transition-base);
-
-    @include hover {
-      color: var(--color-accent);
+        @include hover {
+          text-decoration: none !important;
+          color: var(--color-accent);
+        }
+      }
     }
   }
 
@@ -94,16 +95,21 @@
   }
 
   &__copyright {
-    color: #ededed;
-    font-size: rem(15);
-    line-height: 2;
-    letter-spacing: 1px;
+    p,
+    a {
+      color: #ededed;
+      font-size: rem(15);
+      line-height: 2;
+      letter-spacing: 1px;
+    }
 
     a {
+      color: #ededed !important;
+      text-decoration: none !important;
       transition: color var(--transition-base);
 
       @include hover {
-        color: var(--color-accent);
+        color: var(--color-accent) !important;
       }
     }
   }
