@@ -11,7 +11,7 @@
     color: #ededed;
     font-size: rem(15);
     line-height: 2;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     padding-bottom: fluid(24, 32);
     border-bottom: var(--border-light);
   }
@@ -70,7 +70,7 @@
         font-size: rem(14);
         font-weight: 700;
         line-height: 1;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
         transition: color var(--transition-base);
         text-transform: uppercase;
 
@@ -100,7 +100,7 @@
       color: #ededed;
       font-size: rem(15);
       line-height: 2;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
     }
 
     a {

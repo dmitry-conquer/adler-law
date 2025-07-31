@@ -25,7 +25,6 @@
 
     @include medium {
       flex-direction: column;
-      align-items: center;
       justify-content: stretch;
     }
   }
@@ -33,12 +32,16 @@
   &__row {
     display: flex;
     column-gap: rem(27);
+    justify-content: space-between;
+    @media (max-width: rem(400)) {
+      width: 100%;
+    }
     &--left {
       .htop-bar__item {
         @include x-small {
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
         }
       }
     }
@@ -51,7 +54,7 @@
     display: flex;
     column-gap: rem(8);
 
-     & a.htop-bar__item-description {
+    & a.htop-bar__item-description {
       @include hover {
         color: var(--color-accent) !important;
       }
@@ -61,7 +64,6 @@
   &__item-term {
     font-weight: 700;
     text-transform: uppercase;
-   
   }
 
   &__item-description {

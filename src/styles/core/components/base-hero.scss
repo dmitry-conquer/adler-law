@@ -20,8 +20,8 @@
   }
 
   &--front {
-    padding-block: fluid(60, 160);
-    min-height: 100vh;
+    padding-top: fluid(60, 120);
+    padding-bottom: fluid(60, 408);
     @include large {
       min-height: auto;
       padding-top: rem(60);

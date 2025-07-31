@@ -39,18 +39,24 @@
   }
 
   &__item-icon {
-    width: fluid(40, 60);
-    height: fluid(40, 60);
+    width: fluid(50, 60);
+    height: fluid(50, 60);
   }
 
   &__item-content {
   }
 
   &__item-title {
+    @include above-large {
+      letter-spacing: -0.5px;
+    }
   }
 
   &__item-description {
- 
- 
+    p {
+      line-height: 1.62 !important;
+      font-size: rem(15) !important;
+      letter-spacing: 1px !important;
+    }
   }
 }

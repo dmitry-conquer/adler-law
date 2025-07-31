@@ -53,13 +53,12 @@
       content: "";
       position: absolute;
       width: 400%;
-      height: 100%;
+      height: rem(444);
       top: 0;
       right: 0;
       background-color: var(--color-black);
       border-radius: var(--rounded);
       pointer-events: none;
-      z-index: -1;
       transform: translateY(rem(-58));
 
       @include medium {
@@ -68,8 +67,7 @@
     }
 
     img {
-      width: rem(445);
-      height: rem(445);
+      height: rem(444);
       border-radius: var(--rounded);
       transform: translateX(fluid(20, 92));
       object-fit: cover;
@@ -107,6 +105,9 @@
 
   &__content {
     padding-top: rem(50);
+    a {
+      color: inherit !important;
+    }
 
     @include large {
       padding-top: 0;
@@ -130,8 +131,8 @@
 
   &__item-icon {
     flex-shrink: 0;
-    width: fluid(40, 60);
-    height: fluid(40, 60);
+    width: fluid(50, 60);
+    height: fluid(50, 60);
   }
 
   &__item-content {

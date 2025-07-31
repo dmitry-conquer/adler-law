@@ -78,17 +78,11 @@ h3,
 
 p {
   color: var(--color-gray-100);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 p:not([class]):not(:last-of-type) {
   margin-bottom: 1rem;
-}
-
-@include large {
-  br {
-    display: none !important;
-  }
 }
 
 // ===========================
@@ -112,6 +106,6 @@ p:not([class]):not(:last-of-type) {
   li {
     font-size: 1rem;
     line-height: 1.62;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
   }
 }

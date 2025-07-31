@@ -44,7 +44,7 @@
       font-size: fluid(32, 60);
       line-height: 1;
       text-align: left;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
     }
 
     ul {
@@ -53,6 +53,7 @@
       flex-direction: column;
       row-gap: fluid(8, 16);
       li {
+        line-height: 1.7;
         list-style: none;
         display: flex;
         column-gap: fluid(8, 12);
@@ -69,7 +70,7 @@
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
-          margin-top: rem(6);
+          margin-top: rem(7.6);
         }
       }
     }
