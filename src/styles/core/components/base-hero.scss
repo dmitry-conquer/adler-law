@@ -63,6 +63,15 @@
   }
 
   &__title {
+    @include small {
+      line-height: 1.1;
+    }
+  }
+  &__subtitle {
+    margin-top: rem(20);
+    font-size: fluid(22, 45);
+    text-align: center;
+    color: var(--color-white);
   }
 
   &__button {
